@@ -6,9 +6,10 @@ Java
  */
     public class Carta {
     
-    private int cont; // il contatore per l'output (chiesto da Lugi), i numeri sono da 0 a 39 
-    private int valore; 
-    private String seme;
+    private int cont; // il contatore per l'output (chiesto da Lugi), i numeri sono da 0 a 39.
+
+         private int valore; 
+        private String seme;
     
 public Carta() {}
 
