@@ -15,7 +15,7 @@ public Carta() {}
 public void inserimentoCarte(int a, int b , int c) 
 { 
     switch(a) 
-
+   
     { 
         case 1:
             seme="Mazze"; 
@@ -39,12 +39,14 @@ public void inserimentoCarte(int a, int b , int c)
 
 @Override 
 public String toString() 
-{ return valore +" "+ seme+" "+cont+"\n" ; } 
+{ 
+    return valore +" "+ seme+" "+cont+"\n" ; 
+} 
 
 public void copiaCarta(Carta c) 
 {
-seme=c.seme; 
-valore=c.valore;
-cont=c.cont;// copia contatore
+    seme=c.seme; 
+    valore=c.valore;
+    cont=c.cont;// copia contatore
 } 
 }
