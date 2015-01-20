@@ -1,7 +1,7 @@
 # Java
 Java
 
-//Ancora da definire bitches 
+
 public class Regole {
     private final int MAX=2;
     private Carta mano[];
@@ -11,11 +11,11 @@ public Regole ()
     mano= new Carta[MAX];
 }
     
-public void pescaCarta(Mazzo m)  //, int c)
+public void pescaCarta(Mazzo m)  
     {
         int i;
         double a;
-         mano[1]= new Carta ();
+        mano[1]= new Carta ();
         for(;;)
         {
             a=Math.random()*40;
