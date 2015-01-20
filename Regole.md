@@ -1,6 +1,6 @@
 # Java
 Java
-
+//@Creata da Giorgio 
 
 public class Regole {
     private final int MAX=2;
