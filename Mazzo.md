@@ -11,63 +11,69 @@ import java.lang.Math;
 
 /**
  *
- * @author Francesco
+ * @author Francesco , Giorgio .
  */
  
 public class Mazzo {
+    public class Mazzo { 
     private Carta C[]; 
     protected final int MAX=40;
-  
-    
-public Mazzo(){
+
+public Mazzo()
+{ 
     C=new Carta[MAX];
+
+}
+
+public void caricaMazzo() { 
+    int b=0; 
+    for(int i=1; i<5; i++)
+    { 
+        for(int a=1; a<11; a++)
+        { C[b]=new Carta(); 
+        C[b].inserimentoCarte(i, a, b); 
+        b++; } } }
+
+public void mescolaMazzo() 
+{ 
+  double c=0 ;
+  int b = 0  ; 
+  int a = 0  ;
+        for(int i=0; i<MAX; i++)
+{ 
     
-}
-
-public void caricaMazzo() {
-int b=0; 
-    for(int i=1; i<5; i++){
-        for(int a=1; a<11; a++){ 
-            C[b]=new Carta();
-            C[b].inserimentoCarte(i, a);
-            b++; 
-    }
-}
-}
-
-public void mescolaMazzo() {
-int variabile=0 ; //variabile1 = 0 
-    for(int i=0; i<MAX; i++){
-        variabile=(int)Math.random()*40;
-//        variabile1=(int)Math.random()*40;
-       // if(C[i]!=null || C[variabile]!=null)
-        //{   
-         //   CC.copiaCarta(C[i]); 
-            C[i].copiaCarta(C[variabile]); 
-           // C[variabile].copiaCarta(CC);
-            
-
-
-        //} 
-    }
-}
-
-public void visualizzaMazzo() {
-    for(int i=0; i<MAX; i++)
+    c=Math.random()*40; //abbiamo deciso di castare la variabile in un secondo momento poichè genera errori
+    a=(int) c;          //casting
+    c=Math.random()*40;
+    b=(int) c;
+    if(C[a]!=null || C[b]!=null) 
     {
-        System.out.println(C[i].toString()); 
+        scambia(a,b); 
+    } 
+    else
+    {
+        
     }
 }
+}
 
-public void scambia(int i , int a)
+
+public void visualizzaMazzo() 
+{ 
+for(int i=0; i<MAX; i++) { 
+System.out.println(C[i].toString()); 
+} 
+}
+
+public void scambia(int i , int a) 
 {
-   
-   
+
 Carta c =new Carta ();
 
-        c.copiaCarta(C[i]);
-        C[i].copiaCarta(C[a]);
-        C[a].copiaCarta(c);
+    c.copiaCarta(C[i]);
+    C[i].copiaCarta(C[a]);
+    C[a].copiaCarta(c);
+
 }
-        
+
 }
