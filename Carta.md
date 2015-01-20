@@ -6,9 +6,8 @@ Java
  */
     public class Carta {
     
-    private int cont; // il contatore per l'output (chiesto da Lugi), i numeri sono da 0 a 39.
-
-         private int valore; 
+        private int cont;   // il contatore per l'output (chiesto da Lugi), i numeri sono da 0 a 39.
+        private int valore; 
         private String seme;
     
 public Carta() {}
@@ -41,11 +40,11 @@ public void inserimentoCarte(int a, int b , int c)
 @Override 
 public String toString() 
 { return valore +" "+ seme+" "+cont+"\n" ; } 
+
 public void copiaCarta(Carta c) 
 {
 seme=c.seme; 
 valore=c.valore;
 cont=c.cont;// copia contatore
-
 } 
 }
