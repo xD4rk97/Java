@@ -1,0 +1,87 @@
+public class Pesca {
+ 
+   
+public Pesca ()
+{
+}
+    
+public static Carta carta(Mazzo m )    //pescaggio di una carta random
+    {
+        Carta pescata=new Carta (); 
+        int i;
+        double a;      
+        for(;;)
+        {
+            a=Math.random()*40+1;
+            i=(int) a;
+    
+            if(m.C[i]!= null)
+        {
+                pescata.copiaCarta(m.C[i]);
+                m.C[i]=null; 
+                return pescata ;
+        }
+   
+    }
+}
+       
+public static Carta perIndice(int i,Mazzo m ) // pescaggio della prima carta possibile dato dato un indice
+    {
+    Carta pescata=new Carta (); 
+    for(;;){
+        if (i<=0 || i>= m.C.length)
+        {
+        i=1;
+        
+        }
+        else
+        {
+            if(m.C[i]!= null)
+                 {
+                    pescata.copiaCarta(m.C[i]);
+                    m.C[i]=null;
+                    return pescata;
+                 }
+                else
+                {
+                     i++ ;
+                }
+    }
+    }
+}
+    
+public static Carta  prossimaCarta (Mazzo m)
+{
+    Carta pescata=new Carta (); 
+    int i=1;
+    for(;;){
+    if(i<m.C.length)
+        {
+          if(m.C[i]!= null )  
+          {  
+              pescata.copiaCarta(m.C[i]);
+              m.C[i]=null;
+               return pescata;
+          }
+          else
+          {
+              i++;
+          }
+        
+        }
+    else
+    {
+               return null;
+    }
+
+
+
+}
+        
+       
+
+
+
+
+}
+}
